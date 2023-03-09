@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ua-UK">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>УКРАЇНЬСКАА ВІКТОРИАААААААААААААААААА</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  .quiz__option--selected {
+    background-color: white;
+    color: black;
+  }
+</style>
+<body class="bg-black text-white">
+  <div class="container max-w-lg mx-auto h-screen flex flex-col justify-between px-4">
+    <header class="mb-4">
+      <h1 class="text-xl md:text-2xl pt-1 flex items-center justify-center text-center space-x-1"> 
+        <span class="text-3xl">🇺🇦</span> 
+        <span> Вітаємо на Українській вікторині!</span> 
+        <span class="text-3xl">🇺🇦</span></h1>
+    </header>
+    <main class="my-auto">
+      <div class="quiz rounded w-full">
+        <div class="quiz__header p-2">
+          <div class="text-center text-lg">Запитання:</div>
+          <h2 class="quiz__question text-2xl md:text-3xl text-center pb-1">Аваков - це ?</h2>
+        </div>
+        <hr>
+        <div class="quiz__body mt-2">
+          <h3 class="text-center text-xl p-2">Ваша відповідь: <span class="selected-option"></span> </h3>
+
+          <div class="quiz__options my-4 text-center flex flex-col overflow-y-auto max-h-52">
+
+          </div>
+        </div>
+        <div class="quiz__footer">
+          <button disabled class="quiz__check-btn transition-all duration-200 py-4 text-xl bg-white w-full  text-black rounded active:opacity-90 disabled:opacity-60">Перевірити</button>
+        </div>
+      </div>
+      <div class="correct-screen hidden flex flex-col justify-center items-center">
+        <h2 class="text-2xl text-green-600"> ПРАВИЛЬНО !!! </h2>
+        <img class="w-3/4 mt-12" src="./assets/good-job.gif" alt="correct gif">
+      </div>
+      <div class="incorrect-screen hidden flex flex-col justify-center items-center">
+        <h2 class="text-2xl text-red-600"> НЕПРАВИЛЬНО !!! ;(((  </h2>
+        <img class="w-3/4 mt-12" src="./assets/wrong.gif" alt="wrong gif">
+      </div>
+      <div class="finish-screen hidden flex flex-col justify-center items-center">
+        <h2 class="text-2xl text-yellow-500">Вітаю друже !!! Ти пройшов це гівно!!!</h2>
+        <img class="w-3/4 mt-12" src="./assets/finish.gif" alt="finish gif">
+
+        <div class="info mt-10 text-xl text-center">
+          <div>
+            Ти відповів правильно на 
+            <span class="text-2xl font-bold">
+              <span class="info__correct-answers text-green-600">3</span>
+              з
+              <span class="info__count-questions">3</span> 
+            </span>
+            запитань!!!
+          </div>
+          <div>
+            І витратив на це <span class="info__time-spended text-2xl font-bold text-red-600">126</span> секунд!!!
+          </div>
+        </div>
+        <button class="repeat-btn mt-10 rounded text-black bg-white text-xl px-2 py-1 hover:opacity-90">ХОЧУ ЩЕ РАЗ!!!</button>
+      </div>
+    </main> 
+    <footer class="mt-4">
+      <div class="socials text-center flex justify-center p-2 items-center space-x-3">
+        <a class="socials__link w-12 transtion-transform duration-100 hover:scale-110" target="_blank" href="https://www.instagram.com/artemhlam/">
+          <img src="./assets/socials/instagram-icon.svg" alt="Instagram icon" class="socials__link-icon">
+        </a>
+        <a class="socials__link w-12 transtion-transform duration-100 hover:scale-110" target="_blank" href="https://github.com/shemaIdk">
+          <img src="./assets/socials/github-icon.svg" alt="Github icon" class="socials__link-icon">
+        </a>
+        <a class="socials__link w-12 transtion-transform duration-100 hover:scale-110" target="_blank" href="https://telegram.me/artemhlam">
+          <img src="./assets/socials/telegram-icon.svg" alt="Telegram icon" class="socials__link-icon">
+        </a>	
+      </div>
+    </footer>
+  </div>
+</body>
+<script type="module" src="./scripts/script.js"></script>
+</html>
